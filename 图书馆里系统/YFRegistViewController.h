@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  YFRegistViewController.h
 //  图书馆里系统
 //
 //  Created by 张艺峰 on 15/11/8.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface YFRegistViewController : UIViewController
 
 
 @end
-

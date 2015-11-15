@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  YFRootViewController.h
 //  图书管理系统
 //
 //  Created by 张艺峰 on 15/11/8.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface YFRootViewController : UINavigationController
 
 @end
-

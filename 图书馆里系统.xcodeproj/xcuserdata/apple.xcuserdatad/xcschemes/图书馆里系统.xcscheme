@@ -5,6 +5,22 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "189642261BEF6BBB008BDC65"
+               BuildableName = "&#x56fe;&#x4e66;&#x9986;&#x91cc;&#x7cfb;&#x7edf;.app"
+               BlueprintName = "&#x56fe;&#x4e66;&#x9986;&#x91cc;&#x7cfb;&#x7edf;"
+               ReferencedContainer = "container:&#x56fe;&#x4e66;&#x9986;&#x91cc;&#x7cfb;&#x7edf;.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -12,7 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1896423F1BEF6BBB008BDC65"
+               BuildableName = "&#x56fe;&#x4e66;&#x9986;&#x91cc;&#x7cfb;&#x7edf;Tests.xctest"
+               BlueprintName = "&#x56fe;&#x4e66;&#x9986;&#x91cc;&#x7cfb;&#x7edf;Tests"
+               ReferencedContainer = "container:&#x56fe;&#x4e66;&#x9986;&#x91cc;&#x7cfb;&#x7edf;.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1896424A1BEF6BBB008BDC65"
+               BuildableName = "&#x56fe;&#x4e66;&#x9986;&#x91cc;&#x7cfb;&#x7edf;UITests.xctest"
+               BlueprintName = "&#x56fe;&#x4e66;&#x9986;&#x91cc;&#x7cfb;&#x7edf;UITests"
+               ReferencedContainer = "container:&#x56fe;&#x4e66;&#x9986;&#x91cc;&#x7cfb;&#x7edf;.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "189642261BEF6BBB008BDC65"
+            BuildableName = "&#x56fe;&#x4e66;&#x9986;&#x91cc;&#x7cfb;&#x7edf;.app"
+            BlueprintName = "&#x56fe;&#x4e66;&#x9986;&#x91cc;&#x7cfb;&#x7edf;"
+            ReferencedContainer = "container:&#x56fe;&#x4e66;&#x9986;&#x91cc;&#x7cfb;&#x7edf;.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +71,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "189642261BEF6BBB008BDC65"
+            BuildableName = "&#x56fe;&#x4e66;&#x9986;&#x91cc;&#x7cfb;&#x7edf;.app"
+            BlueprintName = "&#x56fe;&#x4e66;&#x9986;&#x91cc;&#x7cfb;&#x7edf;"
+            ReferencedContainer = "container:&#x56fe;&#x4e66;&#x9986;&#x91cc;&#x7cfb;&#x7edf;.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +90,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "189642261BEF6BBB008BDC65"
+            BuildableName = "&#x56fe;&#x4e66;&#x9986;&#x91cc;&#x7cfb;&#x7edf;.app"
+            BlueprintName = "&#x56fe;&#x4e66;&#x9986;&#x91cc;&#x7cfb;&#x7edf;"
+            ReferencedContainer = "container:&#x56fe;&#x4e66;&#x9986;&#x91cc;&#x7cfb;&#x7edf;.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

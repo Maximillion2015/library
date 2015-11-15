@@ -1,12 +1,15 @@
+
 //
 //  AppDelegate.m
-//  图书馆里系统
+//  图书管理系统
 //
 //  Created by 张艺峰 on 15/11/8.
 //  Copyright © 2015年 张艺峰. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "YFRootViewController.h"
+#import "YFLoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -15,8 +18,41 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+ {
+//        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] ;
+//         // Override point for customization after application launch.
+//    
+//     self.window.backgroundColor = [UIColor whiteColor];
+    
+         //判断是不是第一次启动应用
+    if(![[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"])
+    {
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] ;
+        // Override point for customization after application launch.
+        
+        self.window.backgroundColor = [UIColor whiteColor];
+        
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"firstLaunch"];
+        NSLog(@"第一次启动");
+        //如果是第一次启动的话,使用UserGuideViewController (用户引导页面) 作为根视图
+        YFRootViewController *root = [[YFRootViewController alloc] init];
+        
+        self.window.rootViewController = root;
+        [self.window makeKeyAndVisible];
+
+    }
+//    else
+//    {
+//        NSLog(@"不是第一次启动");
+//        //如果不是第一次启动的话,使用LoginViewController作为根视图
+//        YFLoginViewController *login = [[YFLoginViewController alloc] init];
+//        self.window.rootViewController = login;
+//        NSLog(@"%@", self.window.rootViewController);
+//    }
+//    [self.window makeKeyAndVisible];
+
     return YES;
 }
 
