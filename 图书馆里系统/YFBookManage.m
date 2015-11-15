@@ -66,36 +66,36 @@ static YFBookManage *bookServie;
 //    }
 //}
 
-//- (NSMutableArray *)getAllBooks{
-//    NSString* path = [self applicationDocumentsPath];
-//    NSMutableArray* books = [[NSMutableArray alloc]init];
-//    if (sqlite3_open([path UTF8String], &db)!=SQLITE_OK) {
-//        NSAssert(NO, @"打开数据库失败");
-//        sqlite3_close(db);
-//    }else{
-//        sqlite3_stmt* statement;
-//        NSString* selectSql = @"select* from bookTable";
-//        if (sqlite3_prepare_v2(db, [selectSql UTF8String], -1, &statement, nil)==SQLITE_OK) {
-//            while (sqlite3_step(statement)==SQLITE_ROW) {
-//                YFBookInfo* bookInfo = [[YFBookInfo alloc] init];
-//                NSUInteger bookId =sqlite3_column_int64(statement, 0);
-//                [bookInfo setBookId:bookId];
-//                
-//                char* bookName = (char*)sqlite3_column_text(statement, 1);
-//                [bookInfo setBookName:[[NSString alloc]initWithUTF8String:bookName]];
-//                
-//                char* authorName = (char*)sqlite3_column_text(statement, 2);
-//                [bookInfo setAuthorName:[[NSString alloc]initWithUTF8String:authorName]];
-//                
-//                char* phone =(char*)sqlite3_column_text(statement, 3);
-//                [bookInfo setPhone:[[NSString alloc]initWithUTF8String:phone]];
-//                
-//                [books addObject:bookInfo];
-//            }
-//        }
-//    }
-//    return books;
-//}
+- (NSMutableArray *)getAllBooks{
+    NSString* path = [self applicationDocumentsPath];
+    NSMutableArray* books = [[NSMutableArray alloc]init];
+    if (sqlite3_open([path UTF8String], &db)!=SQLITE_OK) {
+        NSAssert(NO, @"打开数据库失败");
+        sqlite3_close(db);
+    }else{
+        sqlite3_stmt* statement;
+        NSString* selectSql = @"select* from bookTable";
+        if (sqlite3_prepare_v2(db, [selectSql UTF8String], -1, &statement, nil)==SQLITE_OK) {
+            while (sqlite3_step(statement)==SQLITE_ROW) {
+                YFBookInfo* bookInfo = [[YFBookInfo alloc] init];
+                NSUInteger bookId =sqlite3_column_int64(statement, 0);
+                [bookInfo setBookId:bookId];
+                
+                char* bookName = (char*)sqlite3_column_text(statement, 1);
+                [bookInfo setBookName:[[NSString alloc]initWithUTF8String:bookName]];
+                
+                char* authorName = (char*)sqlite3_column_text(statement, 2);
+                [bookInfo setAuthorName:[[NSString alloc]initWithUTF8String:authorName]];
+                
+                char* phone =(char*)sqlite3_column_text(statement, 3);
+                [bookInfo setPhone:[[NSString alloc]initWithUTF8String:phone]];
+                
+                [books addObject:bookInfo];
+            }
+        }
+    }
+    return books;
+}
 
 - (void)updateBookInfo:(YFBookInfo *) bookInfo {
     NSString* path = [self applicationDocumentsPath];
