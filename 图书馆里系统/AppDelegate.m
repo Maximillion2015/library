@@ -11,6 +11,7 @@
 #import "YFRootViewController.h"
 #import "YFLoginViewController.h"
 
+
 @interface AppDelegate ()
 
 @end
@@ -38,7 +39,7 @@
         NSLog(@"第一次启动");
         //如果是第一次启动的话,使用UserGuideViewController (用户引导页面) 作为根视图
         YFRootViewController *root = [[YFRootViewController alloc] init];
-        
+
         self.window.rootViewController = root;
         [self.window makeKeyAndVisible];
 

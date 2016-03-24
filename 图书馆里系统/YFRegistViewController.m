@@ -7,17 +7,44 @@
 //
 
 #import "YFRegistViewController.h"
+#import "YFVIP.h"
+#import "YFUserManage.h"
+#import "MBProgressHUD+MJ.h"
 
-@interface YFRegistViewController ()
+@interface YFRegistViewController ()<UITextFieldDelegate>
 
 @end
 
 @implementation YFRegistViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.userPwd.delegate = self;
 }
 
+// 保存
+- (IBAction)save:(id)sender {
+    YFVIP* userInfo = [[YFVIP alloc]init];
+    [userInfo setName:[self.userName text]];
+    [userInfo setPwd:[self.userPwd text]];
+    
+    YFUserManage* userManage = [YFUserManage sharedObject];
+    if (self.userName.text.length != 0 && self.userPwd.text.length != 0) {
+        [userManage addUserInfo:userInfo];
+    }else {
+        [MBProgressHUD showError:@"请输入注册信息"];
+    }
+    
+    [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:0] animated:YES];
+
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
 
 @end

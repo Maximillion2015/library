@@ -9,7 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "YFBookInfo.h"
 
-@interface YFLibraryTableViewController : UITableViewController
+@class YFVIP;
+
+@interface YFLibraryTableViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
+@property (nonatomic, strong) YFVIP *vip;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+//@property (nonatomic, retain) NSMutableArray *dataArr;
+//@property (nonatomic, retain) NSMutableArray *sortedArrForArrays;
+//@property (nonatomic, retain) NSMutableArray *sectionHeadsKeys;
 @end

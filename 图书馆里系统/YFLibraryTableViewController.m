@@ -9,52 +9,69 @@
 #import "YFLibraryTableViewController.h"
 #import "YFEditBookViewController.h"
 #import "YFBookManage.h"
+#import "YFBookInfo.h"
+#import "YFVIP.h"
+#import "YFEditUserViewController.h"
+
+
 
 @interface YFLibraryTableViewController ()<UITableViewDataSource,UITableViewDelegate, UISearchBarDelegate>
+
+@property (nonatomic, strong) NSMutableArray *books;
+
+@property (nonatomic, strong) NSMutableArray *arrayOfCharacters;
 
 @end
 
 @implementation YFLibraryTableViewController
-NSMutableArray* searchResult;
+
+
+NSArray *searchResult;
 bool isSearch = false;
+
+- (NSMutableArray *)books
+{
+    if (_books == nil) {
+        _books = [NSMutableArray array];
+    }
+    return _books;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+//    [self initData];
+//    NSLog(@"%@", self.vip.name);
+    NSLog(@"@@@@Q@@@@");
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(freshTableData) name:@"refreshData" object:nil];
     self.searchBar.delegate = self;
+//    [self.navigationController.viewControllers objectAtIndex:2];
 }
 
-- (IBAction)backBtn:(id)sender {
-    [self.navigationController popToRootViewControllerAnimated:YES];
-}
 
 #pragma mark - Table view data source
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//    
-//    if (isSearch) {
-//        return searchResult.count;
-//    }else{
-//        YFBookManage* bookService = [YFBookManage sharedObject];
-//        return [bookService.getAllBooks count];
-//    }
-//
-//
-//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     if (isSearch) {
         return searchResult.count;
     }else{
-        YFBookManage* bookService = [YFBookManage sharedObject];
-        return [bookService.getAllBooks count];
+//        return [[self.sortedArrForArrays objectAtIndex:section] count];
+        YFBookManage *manage = [YFBookManage sharedObject];
+        NSArray *array = [manage getAllBooks];
+//        NSLog(@"----%d", array.count);
+        return array.count;
+
     }
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -72,20 +89,45 @@ bool isSearch = false;
         if (searchResult.count == indexPath.row+1) {
             isSearch = false;
         }
-    }else{
         YFBookManage* bookService = [YFBookManage sharedObject];
         NSMutableArray* books = [bookService getAllBooks];
-        bookInfo =[books objectAtIndex:indexPath.row];
+        bookInfo = [books objectAtIndex:indexPath.row];
+        cell.textLabel.text = bookInfo.bookName;
+        cell.detailTextLabel.numberOfLines = 0;
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"作者：%@\n出版社：%@\n简介：%@\n出版时间：%@",bookInfo.authorName, bookInfo.publish,bookInfo.authorDec, bookInfo.publishTime];
+
+        cell.backgroundColor = self.view.backgroundColor;
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }else{
+        
+//        NSArray *array = [self.sortedArrForArrays objectAtIndex:indexPath.section];
+//        ChineseString *str = [array objectAtIndex:indexPath.row];
+//        NSLog(@"str-----%@", str.string);
+        YFBookManage* bookService = [YFBookManage sharedObject];
+        NSMutableArray* books = [bookService getAllBooks];
+        bookInfo = [books objectAtIndex:indexPath.row];
+        cell.textLabel.text = bookInfo.bookName;
+        
+//        cell.detailTextLabel.text = info.authorName;
+        cell.detailTextLabel.numberOfLines = 0;
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"作者：%@\n出版社：%@\n简介：%@\n出版时间：%@",bookInfo.authorName, bookInfo.publish,bookInfo.authorDec, bookInfo.publishTime];
+        
+//        NSLog(@"%@", bookInfo.image);
+//        NSString *str = [bookInfo.image ]
+        cell.imageView.image = [UIImage imageWithContentsOfFile:bookInfo.image];
+        
+        cell.backgroundColor = self.view.backgroundColor;
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
-    cell.textLabel.text = bookInfo.bookName;
-    cell.detailTextLabel.text = bookInfo.authorName;
-
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//    cell.textLabel.text = bookInfo.bookName;
+//    cell.detailTextLabel.text = bookInfo.authorName;
+//    cell.backgroundColor = self.view.backgroundColor;
+//    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    [self.arrayOfCharacters addObject:cell.textLabel.text];
+    
     return cell;
 
-    
-    
-    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -98,54 +140,68 @@ bool isSearch = false;
     [editBook setBookInfo:[books objectAtIndex:indexPath.row]];
     [self presentViewController:editBook animated:YES completion:nil];
 
+}
 
-    editBook.bookName.text = @"张三";
+
+- (void)freshTableData{
+//    [self initData];
+    [self.tableView reloadData];
 }
 
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+#pragma mark - searchBar DataSourse
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    [self filterSearchResult:searchText];
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    NSString* searchText = searchBar.text;
+    [self filterSearchResult:searchText];
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+- (void)filterSearchResult:(NSString*)searchText{
+    if ([searchText isEqualToString:@""]) {
+        [self.tableView reloadData];
+        return;
+    }
+    isSearch = TRUE;
+    YFBookManage *bookService = [YFBookManage sharedObject];
+    NSMutableArray *books = [bookService getAllBooks];
+    
+    NSMutableArray *copy = [NSMutableArray array];
+    
+    for (YFBookInfo *info in books) {
+        NSRange titleResule = [info.bookName rangeOfString:searchText options:NSCaseInsensitiveSearch];
+        if (titleResule.length > 0) {
+            [copy addObject:info];
+        }
+    }
+    
+//    NSPredicate *predict = [NSPredicate predicateWithFormat:@"bookName contains %@",searchText];
+//    searchResult = [books filteredArrayUsingPredicate:predict];
+    
+    searchResult = copy;
+    NSLog(@"%d", copy.count);
+    
+    [self.tableView reloadData];
 }
-*/
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+
+
+#pragma mark - 个人信息
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.destinationViewController isKindOfClass:[YFEditUserViewController class]]) {
+        
+        YFEditUserViewController *user = segue.destinationViewController;
+//        user.navigationItem.title = [NSString stringWithFormat:@"%@的个人信息", self.vip.name];
+        
+        user.vip = self.vip;
+    }
 }
-*/
 
 @end

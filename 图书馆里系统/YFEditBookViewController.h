@@ -15,5 +15,13 @@
 @property (strong, nonatomic) IBOutlet UITextField *bookAuthor;
 @property (strong, nonatomic) IBOutlet UITextField *phone;
 
-@property (weak, nonatomic) IBOutlet UIButton *btn;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UITextField *authorDec;
+@property (weak, nonatomic) IBOutlet UITextField *publish;
+@property (weak, nonatomic) IBOutlet UILabel *publishTime;
+@property (weak, nonatomic) IBOutlet UITextField *email;
+@property (weak, nonatomic) IBOutlet UIButton *clean;
+
+@property (weak, nonatomic) IBOutlet UIButton *finish;
+
 @end

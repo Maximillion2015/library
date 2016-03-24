@@ -7,10 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181336241BF8B06B004FBAE9 /* YFAddBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181336231BF8B06B004FBAE9 /* YFAddBookViewController.m */; };
 		184A23431BF075A6008A66BD /* YFEditBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184A23421BF075A6008A66BD /* YFEditBookViewController.m */; };
 		184A23461BF076B2008A66BD /* YFBookInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 184A23451BF076B2008A66BD /* YFBookInfo.m */; };
 		184A23491BF078BB008A66BD /* YFBookManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 184A23481BF078BB008A66BD /* YFBookManage.m */; };
 		184A234B1BF08B7E008A66BD /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 184A234A1BF08B7E008A66BD /* libsqlite3.tbd */; };
+		184A6DE21C02357100320049 /* BreakfastTimeSelectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 184A6DDD1C02357100320049 /* BreakfastTimeSelectModel.m */; };
+		184A6DE31C02357100320049 /* CoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184A6DDF1C02357100320049 /* CoverView.m */; };
+		184A6DE41C02357100320049 /* CustomPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184A6DE11C02357100320049 /* CustomPickView.m */; };
+		186C21C71BFEC9CA00822C6F /* YFUserManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 186C21C61BFEC9CA00822C6F /* YFUserManage.m */; };
+		186C21CA1BFED5AF00822C6F /* YFEditUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186C21C91BFED5AF00822C6F /* YFEditUserViewController.m */; };
+		187CB4C81C10253800BDA950 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187CB4C11C10253800BDA950 /* ViewController.m */; };
+		187CB4C91C10253800BDA950 /* YFBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 187CB4C31C10253800BDA950 /* YFBezierPath.m */; };
+		187CB4CA1C10253800BDA950 /* YFHandleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187CB4C51C10253800BDA950 /* YFHandleImageView.m */; };
+		187CB4CB1C10253800BDA950 /* YFPaintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 187CB4C71C10253800BDA950 /* YFPaintView.m */; };
+		187CB4CE1C10291500BDA950 /* UIImage+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 187CB4CD1C10291500BDA950 /* UIImage+Tool.m */; };
 		1896422C1BEF6BBB008BDC65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1896422B1BEF6BBB008BDC65 /* main.m */; };
 		1896422F1BEF6BBB008BDC65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1896422E1BEF6BBB008BDC65 /* AppDelegate.m */; };
 		189642351BEF6BBB008BDC65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189642331BEF6BBB008BDC65 /* Main.storyboard */; };
@@ -25,6 +36,7 @@
 		1896427E1BEF85DA008BDC65 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1896427A1BEF85DA008BDC65 /* MBProgressHUD.bundle */; };
 		1896427F1BEF85DA008BDC65 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1896427C1BEF85DA008BDC65 /* MBProgressHUD.m */; };
 		189642821BEF894E008BDC65 /* YFRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189642811BEF894E008BDC65 /* YFRegistViewController.m */; };
+		18D260381BFA1CF7002F97C1 /* YFVIP.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D260371BFA1CF7002F97C1 /* YFVIP.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		181336221BF8B06B004FBAE9 /* YFAddBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFAddBookViewController.h; sourceTree = "<group>"; };
+		181336231BF8B06B004FBAE9 /* YFAddBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFAddBookViewController.m; sourceTree = "<group>"; };
 		184A23411BF075A6008A66BD /* YFEditBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFEditBookViewController.h; sourceTree = "<group>"; };
 		184A23421BF075A6008A66BD /* YFEditBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFEditBookViewController.m; sourceTree = "<group>"; };
 		184A23441BF076B2008A66BD /* YFBookInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFBookInfo.h; sourceTree = "<group>"; };
@@ -52,6 +66,27 @@
 		184A23471BF078BB008A66BD /* YFBookManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFBookManage.h; sourceTree = "<group>"; };
 		184A23481BF078BB008A66BD /* YFBookManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFBookManage.m; sourceTree = "<group>"; };
 		184A234A1BF08B7E008A66BD /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		184A6DDC1C02357100320049 /* BreakfastTimeSelectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BreakfastTimeSelectModel.h; sourceTree = "<group>"; };
+		184A6DDD1C02357100320049 /* BreakfastTimeSelectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BreakfastTimeSelectModel.m; sourceTree = "<group>"; };
+		184A6DDE1C02357100320049 /* CoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverView.h; sourceTree = "<group>"; };
+		184A6DDF1C02357100320049 /* CoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverView.m; sourceTree = "<group>"; };
+		184A6DE01C02357100320049 /* CustomPickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPickView.h; sourceTree = "<group>"; };
+		184A6DE11C02357100320049 /* CustomPickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPickView.m; sourceTree = "<group>"; };
+		186C21C51BFEC9CA00822C6F /* YFUserManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFUserManage.h; sourceTree = "<group>"; };
+		186C21C61BFEC9CA00822C6F /* YFUserManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFUserManage.m; sourceTree = "<group>"; };
+		186C21C81BFED5AF00822C6F /* YFEditUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFEditUserViewController.h; sourceTree = "<group>"; };
+		186C21C91BFED5AF00822C6F /* YFEditUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFEditUserViewController.m; sourceTree = "<group>"; };
+		187CB4C01C10253800BDA950 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		187CB4C11C10253800BDA950 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		187CB4C21C10253800BDA950 /* YFBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFBezierPath.h; sourceTree = "<group>"; };
+		187CB4C31C10253800BDA950 /* YFBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFBezierPath.m; sourceTree = "<group>"; };
+		187CB4C41C10253800BDA950 /* YFHandleImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFHandleImageView.h; sourceTree = "<group>"; };
+		187CB4C51C10253800BDA950 /* YFHandleImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFHandleImageView.m; sourceTree = "<group>"; };
+		187CB4C61C10253800BDA950 /* YFPaintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFPaintView.h; sourceTree = "<group>"; };
+		187CB4C71C10253800BDA950 /* YFPaintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFPaintView.m; sourceTree = "<group>"; };
+		187CB4CC1C10291500BDA950 /* UIImage+Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tool.h"; sourceTree = "<group>"; };
+		187CB4CD1C10291500BDA950 /* UIImage+Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tool.m"; sourceTree = "<group>"; };
+		187F12B21C0201A3003D2F65 /* MacroDefineHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroDefineHeader.h; sourceTree = "<group>"; };
 		189642271BEF6BBB008BDC65 /* 图书馆里系统.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "图书馆里系统.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1896422B1BEF6BBB008BDC65 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1896422D1BEF6BBB008BDC65 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -79,6 +114,8 @@
 		1896427C1BEF85DA008BDC65 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		189642801BEF894E008BDC65 /* YFRegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRegistViewController.h; sourceTree = "<group>"; };
 		189642811BEF894E008BDC65 /* YFRegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRegistViewController.m; sourceTree = "<group>"; };
+		18D260361BFA1CF7002F97C1 /* YFVIP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFVIP.h; sourceTree = "<group>"; };
+		18D260371BFA1CF7002F97C1 /* YFVIP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFVIP.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +144,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		184A6DDB1C02357100320049 /* pickview */ = {
+			isa = PBXGroup;
+			children = (
+				184A6DDC1C02357100320049 /* BreakfastTimeSelectModel.h */,
+				184A6DDD1C02357100320049 /* BreakfastTimeSelectModel.m */,
+				184A6DDE1C02357100320049 /* CoverView.h */,
+				184A6DDF1C02357100320049 /* CoverView.m */,
+				184A6DE01C02357100320049 /* CustomPickView.h */,
+				184A6DE11C02357100320049 /* CustomPickView.m */,
+			);
+			path = pickview;
+			sourceTree = "<group>";
+		};
+		187CB4BF1C10252500BDA950 /* draw */ = {
+			isa = PBXGroup;
+			children = (
+				187CB4CC1C10291500BDA950 /* UIImage+Tool.h */,
+				187CB4CD1C10291500BDA950 /* UIImage+Tool.m */,
+				187CB4C01C10253800BDA950 /* ViewController.h */,
+				187CB4C11C10253800BDA950 /* ViewController.m */,
+				187CB4C21C10253800BDA950 /* YFBezierPath.h */,
+				187CB4C31C10253800BDA950 /* YFBezierPath.m */,
+				187CB4C41C10253800BDA950 /* YFHandleImageView.h */,
+				187CB4C51C10253800BDA950 /* YFHandleImageView.m */,
+				187CB4C61C10253800BDA950 /* YFPaintView.h */,
+				187CB4C71C10253800BDA950 /* YFPaintView.m */,
+			);
+			name = draw;
+			sourceTree = "<group>";
+		};
 		1896421E1BEF6BBB008BDC65 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +214,8 @@
 		1896422A1BEF6BBB008BDC65 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				184A6DDB1C02357100320049 /* pickview */,
+				187F12B21C0201A3003D2F65 /* MacroDefineHeader.h */,
 				189642771BEF85DA008BDC65 /* MBProgressHUD */,
 				1896422B1BEF6BBB008BDC65 /* main.m */,
 			);
@@ -174,6 +243,7 @@
 		189642731BEF7007008BDC65 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				187CB4BF1C10252500BDA950 /* draw */,
 				1896426F1BEF7003008BDC65 /* YFRootViewController.h */,
 				189642701BEF7003008BDC65 /* YFRootViewController.m */,
 				1896426D1BEF7003008BDC65 /* YFLoginViewController.h */,
@@ -182,8 +252,12 @@
 				189642751BEF8147008BDC65 /* YFLibraryTableViewController.m */,
 				189642801BEF894E008BDC65 /* YFRegistViewController.h */,
 				189642811BEF894E008BDC65 /* YFRegistViewController.m */,
+				186C21C81BFED5AF00822C6F /* YFEditUserViewController.h */,
+				186C21C91BFED5AF00822C6F /* YFEditUserViewController.m */,
 				184A23411BF075A6008A66BD /* YFEditBookViewController.h */,
 				184A23421BF075A6008A66BD /* YFEditBookViewController.m */,
+				181336221BF8B06B004FBAE9 /* YFAddBookViewController.h */,
+				181336231BF8B06B004FBAE9 /* YFAddBookViewController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -207,6 +281,10 @@
 				184A23451BF076B2008A66BD /* YFBookInfo.m */,
 				184A23471BF078BB008A66BD /* YFBookManage.h */,
 				184A23481BF078BB008A66BD /* YFBookManage.m */,
+				186C21C51BFEC9CA00822C6F /* YFUserManage.h */,
+				186C21C61BFEC9CA00822C6F /* YFUserManage.m */,
+				18D260361BFA1CF7002F97C1 /* YFVIP.h */,
+				18D260371BFA1CF7002F97C1 /* YFVIP.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -345,16 +423,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187CB4CE1C10291500BDA950 /* UIImage+Tool.m in Sources */,
+				18D260381BFA1CF7002F97C1 /* YFVIP.m in Sources */,
 				1896427D1BEF85DA008BDC65 /* MBProgressHUD+MJ.m in Sources */,
 				184A23461BF076B2008A66BD /* YFBookInfo.m in Sources */,
+				184A6DE21C02357100320049 /* BreakfastTimeSelectModel.m in Sources */,
 				189642721BEF7003008BDC65 /* YFRootViewController.m in Sources */,
 				189642761BEF8147008BDC65 /* YFLibraryTableViewController.m in Sources */,
 				184A23491BF078BB008A66BD /* YFBookManage.m in Sources */,
+				184A6DE41C02357100320049 /* CustomPickView.m in Sources */,
+				187CB4C81C10253800BDA950 /* ViewController.m in Sources */,
 				189642711BEF7003008BDC65 /* YFLoginViewController.m in Sources */,
+				187CB4C91C10253800BDA950 /* YFBezierPath.m in Sources */,
+				181336241BF8B06B004FBAE9 /* YFAddBookViewController.m in Sources */,
 				1896422F1BEF6BBB008BDC65 /* AppDelegate.m in Sources */,
 				1896422C1BEF6BBB008BDC65 /* main.m in Sources */,
 				1896427F1BEF85DA008BDC65 /* MBProgressHUD.m in Sources */,
+				187CB4CA1C10253800BDA950 /* YFHandleImageView.m in Sources */,
 				184A23431BF075A6008A66BD /* YFEditBookViewController.m in Sources */,
+				186C21CA1BFED5AF00822C6F /* YFEditUserViewController.m in Sources */,
+				187CB4CB1C10253800BDA950 /* YFPaintView.m in Sources */,
+				186C21C71BFEC9CA00822C6F /* YFUserManage.m in Sources */,
+				184A6DE31C02357100320049 /* CoverView.m in Sources */,
 				189642821BEF894E008BDC65 /* YFRegistViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,7 +584,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "图书馆里系统/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.thinkofsomethingclever.------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -505,7 +597,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "图书馆里系统/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.thinkofsomethingclever.------";
 				PRODUCT_NAME = "$(TARGET_NAME)";

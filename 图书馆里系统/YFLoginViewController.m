@@ -10,25 +10,43 @@
 #import "YFLibraryTableViewController.h"
 #import "MBProgressHUD+MJ.h"
 #import "YFRegistViewController.h"
+#import "YFVIP.h"
+#import "YFUserManage.h"
 
 @interface YFLoginViewController ()
+@property (nonatomic, strong) NSMutableArray *VIP;
+@property (nonatomic, strong) YFVIP *vip;
 
 @end
 
 @implementation YFLoginViewController
 
 @synthesize names;
+
+- (NSMutableArray *)VIP
+{
+    if (_VIP == nil) {
+        YFUserManage *userManage = [YFUserManage sharedObject];
+        _VIP = [userManage getAllUser];
+    }
+    return _VIP;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    names = [NSArray arrayWithObjects:@"zhangsan",@"lisi",@"wangwu",@"zhaoliu", nil];
 }
+
 - (IBAction)loginClick:(id)sender {
     BOOL right = NO;
     NSString *user = [self.username text];
     NSString *pwd = [self.password text];
-    for (int i = 0; i < names.count; i++) {
-        NSString *tempUser = names[i];
-        if ([user isEqualToString:tempUser] && [pwd isEqualToString:@"123"]) {
+    
+    YFUserManage *userManage = [YFUserManage sharedObject];
+    _VIP = [userManage getAllUser];
+    
+    for (int i = 0; i < self.VIP.count; i++) {
+        self.vip = self.VIP[i];
+        if ([user isEqualToString:self.vip.name] && [pwd isEqualToString:self.vip.pwd]) {
             [self performSegueWithIdentifier:@"toLib" sender:nil];
             right = YES;
         }
@@ -45,6 +63,9 @@
         
         YFLibraryTableViewController *library = segue.destinationViewController;
         library.navigationItem.title = [NSString stringWithFormat:@"%@的图书馆", [self.username text]];
+
+        library.vip = self.vip;
+        
     } else if ([segue.destinationViewController isKindOfClass:[YFRegistViewController class]]) {
         YFRegistViewController *regist = segue.destinationViewController;
         regist.navigationItem.title = @"注册界面";

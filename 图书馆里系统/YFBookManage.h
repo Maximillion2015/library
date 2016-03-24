@@ -21,5 +21,5 @@
 - (void) deleteBookInfo:(YFBookInfo *)bookInfo;
 - (void)updateBookInfo:(YFBookInfo *)bookInfo;
 - (NSMutableArray *) getAllBooks;
-
+- (YFBookInfo *) selectBookInfo:(NSString *) bookName;
 @end

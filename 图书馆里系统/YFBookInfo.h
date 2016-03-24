@@ -14,5 +14,12 @@
 @property (nonatomic,copy) NSString *bookName;
 @property (nonatomic,copy) NSString *authorName;
 @property (nonatomic,copy) NSString *phone;
+@property (nonatomic,copy) NSString *authorDec;
+@property (nonatomic,copy) NSString *publish;
+@property (nonatomic,copy) NSString *email;
+@property (nonatomic,copy) NSString *publishTime;
+@property (nonatomic,copy) NSString *image;
+
+
 
 @end
